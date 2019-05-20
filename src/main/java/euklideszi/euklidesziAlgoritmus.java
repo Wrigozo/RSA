@@ -43,7 +43,6 @@ public class euklidesziAlgoritmus {
 
         while (!b.equals(BigInteger.ZERO)) {
             maradek = a.mod(b);
-            System.out.println("maradek: "+maradek);
             q = a.divide(b);
             a = b;
             b = maradek;
@@ -61,7 +60,7 @@ public class euklidesziAlgoritmus {
         }
         BigInteger[] result = new BigInteger[3];
         result[0] = q;
-        System.out.println("counter: "+counter);
+
         if (!counter.remainder(BigInteger.valueOf(2)).equals(BigInteger.ZERO)) {
             result[1] = BigInteger.ZERO.subtract(previousX);
             result[2] = previousY;

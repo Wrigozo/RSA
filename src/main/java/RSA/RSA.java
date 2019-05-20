@@ -14,7 +14,6 @@ public class RSA {
         BigInteger n = p.multiply(q);
         enCrypted = gy.gyorshatvanyozas(message, e, n);
         System.out.println("A titkosítandó szöveg: " + message);
-        System.out.println("A titkosított szöveg: " + enCrypted);
         return enCrypted;
     }
 

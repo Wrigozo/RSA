@@ -25,7 +25,7 @@ public class Main {
 
         BigInteger decrypted=rsa.DeCrypt(p,q,encrypted,d);
         System.out.print("Encrypted:\n"+encrypted+"\nDecrypted:\n"+decrypted);
-        
+
 
     }
 }
