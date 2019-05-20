@@ -8,18 +8,18 @@ public class euklidesziAlgoritmus {
     public static BigInteger y = BigInteger.ONE;
     public static BigInteger previousX = BigInteger.ONE;
     public static BigInteger previousY = BigInteger.ZERO;
-    public static BigInteger newX ;
-    public static BigInteger newY ;
+    public static BigInteger newX;
+    public static BigInteger newY;
     public static BigInteger maradek = BigInteger.ONE;
     public static BigInteger q = BigInteger.ONE;
 
 
-    public  BigInteger LKO(BigInteger firstNumber, BigInteger secondNumber) {
+    public BigInteger LKO(BigInteger firstNumber, BigInteger secondNumber) {
         BigInteger tmp = BigInteger.valueOf(0);
-        if(secondNumber.compareTo(firstNumber)==1){
-            tmp=secondNumber;
-            secondNumber=firstNumber;
-            firstNumber=tmp;
+        if (secondNumber.compareTo(firstNumber) == 1) {
+            tmp = secondNumber;
+            secondNumber = firstNumber;
+            firstNumber = tmp;
         }
         tmp = BigInteger.valueOf(0);
         BigInteger osztja = BigInteger.valueOf(0);
