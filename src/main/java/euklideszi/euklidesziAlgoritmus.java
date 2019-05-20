@@ -3,15 +3,15 @@ package main.java.euklideszi;
 import java.math.BigInteger;
 
 public class euklidesziAlgoritmus {
-    public static BigInteger counter = BigInteger.ZERO;
-    public static BigInteger x = BigInteger.ZERO;
-    public static BigInteger y = BigInteger.ONE;
-    public static BigInteger previousX = BigInteger.ONE;
-    public static BigInteger previousY = BigInteger.ZERO;
-    public static BigInteger newX;
-    public static BigInteger newY;
-    public static BigInteger maradek = BigInteger.ONE;
-    public static BigInteger q = BigInteger.ONE;
+    public  BigInteger counter = BigInteger.ZERO;
+    public  BigInteger x = BigInteger.ZERO;
+    public  BigInteger y = BigInteger.ONE;
+    public  BigInteger previousX = BigInteger.ONE;
+    public  BigInteger previousY = BigInteger.ZERO;
+    public  BigInteger newX;
+    public  BigInteger newY;
+    public  BigInteger maradek = BigInteger.ONE;
+    public  BigInteger q = BigInteger.ONE;
 
 
     public BigInteger LKO(BigInteger firstNumber, BigInteger secondNumber) {
@@ -43,6 +43,7 @@ public class euklidesziAlgoritmus {
 
         while (!b.equals(BigInteger.ZERO)) {
             maradek = a.mod(b);
+            System.out.println("maradek: "+maradek);
             q = a.divide(b);
             a = b;
             b = maradek;
@@ -60,6 +61,7 @@ public class euklidesziAlgoritmus {
         }
         BigInteger[] result = new BigInteger[3];
         result[0] = q;
+        System.out.println("counter: "+counter);
         if (!counter.remainder(BigInteger.valueOf(2)).equals(BigInteger.ZERO)) {
             result[1] = BigInteger.ZERO.subtract(previousX);
             result[2] = previousY;

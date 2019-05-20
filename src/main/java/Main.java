@@ -3,6 +3,7 @@ package main.java;
 import main.java.KeyGenerator.KeyGenerator;
 import main.java.RSA.RSA;
 import main.java.euklideszi.*;
+import main.java.kinai.Kinai;
 
 import java.math.BigInteger;
 
@@ -24,7 +25,7 @@ public class Main {
 
         BigInteger decrypted=rsa.DeCrypt(p,q,encrypted,d);
         System.out.print("Encrypted:\n"+encrypted+"\nDecrypted:\n"+decrypted);
-
+        
 
     }
 }
