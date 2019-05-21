@@ -27,10 +27,10 @@ public class KeyGenerator {
         MillerRabin m = new MillerRabin();
 
         while (m.MillerRabin(p) != true) {
-            p = new BigInteger(1024, new java.util.Random());
+            p = new BigInteger(1024,0, new java.util.Random());
         }
         while (m.MillerRabin(q) != true) {
-            q = new BigInteger(1024, new java.util.Random());
+            q = new BigInteger(1024,0, new java.util.Random());
         }
         n = p.multiply(q);
 
